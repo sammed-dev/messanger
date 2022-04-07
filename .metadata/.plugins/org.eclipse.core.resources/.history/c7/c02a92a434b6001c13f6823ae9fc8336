@@ -1,0 +1,11 @@
+package com.datagrokr.messanger.model;
+
+import java.util.Date;
+
+public class Message {
+	
+	private long id;
+	private String message;
+	private Date date;
+	private String author;
+}

@@ -1,0 +1,5 @@
+package com.datagrokr.messanger.service;
+
+public class MessageService {
+
+}
