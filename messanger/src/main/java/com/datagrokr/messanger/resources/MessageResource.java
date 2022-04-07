@@ -19,4 +19,10 @@ public class MessageResource {
 	public List<Message> getMessages() {
 		return messageService.getAllMessages();
 	}
+	
+//	@GET
+//	@Produces(MediaType.TEXT_PLAIN)
+//	public String getMessages() {
+//		return "Hello there";
+//	}
 }

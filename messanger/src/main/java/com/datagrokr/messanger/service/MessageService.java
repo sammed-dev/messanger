@@ -9,8 +9,8 @@ public class MessageService {
 
 	public List<Message> getAllMessages(){
 		
-		Message m1 = new Message(1L,"KKR wins", null, "patcummins");
-		Message m2 = new Message(2L,"RCB wins", null, "DK");
+		Message m1 = new Message(1L,"KKR wins", "patcummins");
+		Message m2 = new Message(2L,"RCB wins","DK");
 		
 		List<Message> messages = new ArrayList<Message>();
 		messages.add(m1);
