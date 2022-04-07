@@ -12,6 +12,13 @@ public class MessageService {
 
 	private static Map<Long, Message> messages = DatabaseClass.getMessages();
 	
+
+	public MessageService() {
+		messages.put(1L, new Message(1,"Hey there", "sammed"));
+		messages.put(2L, new Message(2,"Jax is good", "shreyank"));
+	}
+
+	
 	//to return list of messages:
 	public List<Message> getAllMessages(){
 		return new ArrayList<Message>(messages.values());

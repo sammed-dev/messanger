@@ -1,10 +1,12 @@
 package com.datagrokr.messanger.resources;
 
-import java.util.List;import com.datagrokr.messanger.model.Message;
+import java.util.List;
+import com.datagrokr.messanger.model.Message;
 import com.datagrokr.messanger.service.MessageService;
 
 import jakarta.ws.rs.GET;
 import jakarta.ws.rs.Path;
+import jakarta.ws.rs.PathParam;
 import jakarta.ws.rs.Produces;
 import jakarta.ws.rs.core.MediaType;
 
@@ -20,9 +22,18 @@ public class MessageResource {
 		return messageService.getAllMessages();
 	}
 	
-//	@GET
-//	@Produces(MediaType.TEXT_PLAIN)
-//	public String getMessages() {
-//		return "Hello there";
-//	}
+	@GET
+	@Produces(MediaType.TEXT_PLAIN)
+	public String welcomeMessage() {
+		return "Hello there";
+	}
+	
+	
+	@GET
+	@Produces(MediaType.APPLICATION_XML)
+	@Path("/{messageid}")
+	public Message getMessage(@PathParam("messageid") Long id) {
+		return messageService.getMessage(id);
+	}
+	
 }
