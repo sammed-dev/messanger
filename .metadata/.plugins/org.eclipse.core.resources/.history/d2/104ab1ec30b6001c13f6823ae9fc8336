@@ -1,0 +1,5 @@
+package com.datagrokr.messanger.resources;
+
+public class MessageResource {
+
+}
