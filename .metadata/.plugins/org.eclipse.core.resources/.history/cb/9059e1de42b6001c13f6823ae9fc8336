@@ -1,0 +1,9 @@
+package com.datagrokr.messanger.database;
+
+import java.util.HashMap;
+
+public class DatabaseClass {
+
+	private static Map<Long, Message> map = new HashMap<>();
+	
+}

@@ -1,0 +1,35 @@
+package com.datagrokr.messanger.resources;
+
+import java.util.List;import com.datagrokr.messanger.model.Message;
+import com.datagrokr.messanger.service.MessageService;
+
+import jakarta.ws.rs.GET;
+import jakarta.ws.rs.Path;
+import jakarta.ws.rs.Produces;
+import jakarta.ws.rs.core.MediaType;
+
+@Path("/messages")
+public class MessageResource {
+	
+	MessageService messageService = new MessageService();
+	
+
+	@GET
+    @Path("/order/{orderId}")
+    @Produces(MediaType.APPLICATION_XML)
+    public Order getUserById(@PathParam("orderId") Integer orderId){
+         
+        Order ord = new Order();
+        ord.setOrderNo(orderId);
+        ord.setCustmer("Java2Novice");
+        ord.setAddress("Bangalore");
+        ord.setAmount("$2000");
+        return ord;
+    }
+	
+//	@GET
+//	@Produces(MediaType.TEXT_PLAIN)
+//	public String getMessages() {
+//		return "Hello there";
+//	}
+}
